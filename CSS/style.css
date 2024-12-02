@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to right bottom,
+    rgb(104, 54, 220),
+    rgb(159, 61, 224)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 450px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 20px;
+}
+.container > p {
+  text-transform: capitalize;
+  font-size: 25px;
+}
+.inputBox {
+  width: 100%;
+  position: relative;
+}
+.inputBox input {
+  border-radius: 20px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  background-color: rgba(156, 155, 155, 0.204);
+  outline: none;
+}
+.inputBox button {
+  position: absolute;
+  margin-left: -30px;
+  border-radius: 20px;
+  padding: 11px 30px;
+  font-size: 16px;
+  right: -1px;
+  border: none;
+  background-color: rgb(228, 102, 11);
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 15px;
+}
+
+li .task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+
+li .checkMark {
+  text-align: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba(73, 73, 73, 0.248);
+  color: white;
+  padding: 2px;
+}
+.mark {
+  color: white;
+}
+.check {
+  background-color: rgb(147, 147, 223);
+}
+.complete {
+  text-decoration: line-through;
+}
+
+li .close {
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 2px 8px;
+  transition: all 0.5s;
+}
+
+li .close:hover {
+  background-color: rgb(128 128 128 / 21%);
+  transform: rotate(-180deg);
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.footer button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.footer button:hover {
+  color: rgb(127, 127, 220);
+}
+
+.footer .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 350px;
+  }
+  .itemsLeft,
+  .clearBtn {
+    order: -1;
+  }
+  .footer .btn {
+    margin: auto;
+    margin-top: 10px;
+  }
+}
